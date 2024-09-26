@@ -22,9 +22,38 @@ class HomePage extends StatelessWidget {
             height: 300,
             alignment: Alignment.bottomCenter,
             color: Colors.blue[100],
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [Text("Hello wold")],
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 30.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    "Instant loans up to ₹8 lakhs",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    child: FilledButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll<Color>(
+                          Colors.blue,
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text("Apply now"),
+                          Icon(Icons.chevron_right_rounded)
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],
